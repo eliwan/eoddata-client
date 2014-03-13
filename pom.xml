@@ -178,6 +178,9 @@
                             <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/wsdl/eoddata.wsdl</wsdl>
+                                    <bindingFiles>
+                                        <bindingFile>${basedir}/src/main/wsdl/jaxb-binding.xml</bindingFile>
+                                    </bindingFiles>
                                     <extraargs>
                                         <extraarg>-client</extraarg>
                                         <extraarg>-mark-generated</extraarg>

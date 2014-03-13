@@ -57,30 +57,30 @@
       </s:element>
       <s:complexType name="Response">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Exchange" type="tns:Exchange"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Exchanges" type="tns:ArrayOfExchange"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="tns:Symbol"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Symbols" type="tns:ArrayOfSymbol"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Symbols2" type="tns:ArrayOfSymbol2"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Quote" type="tns:Quote"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Quotes" type="tns:ArrayOfQuote"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Quotes2" type="tns:ArrayOfQuote2"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Splits" type="tns:ArrayOfSplit"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Countries" type="tns:ArrayOfCountryBase"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Fundamentals" type="tns:ArrayOfFundamental"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Technicals" type="tns:ArrayOfTechnical"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SymbolChanges" type="tns:ArrayOfSymbolChange"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Chart" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Membership" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="Months" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="DataFormats" type="tns:ArrayOfDataFormat"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGE" type="tns:EXCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGES" type="tns:ArrayOfEXCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOL" type="tns:SYMBOL"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS" type="tns:ArrayOfSYMBOL"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS2" type="tns:ArrayOfSYMBOL2"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTE" type="tns:QUOTE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTES" type="tns:ArrayOfQUOTE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTES2" type="tns:ArrayOfQUOTE2"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SPLITS" type="tns:ArrayOfSPLIT"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COUNTRIES" type="tns:ArrayOfCountryBase"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FUNDAMENTALS" type="tns:ArrayOfFUNDAMENTAL"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TECHNICALS" type="tns:ArrayOfTECHNICAL"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLCHANGES" type="tns:ArrayOfSYMBOLCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHART" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MEMBERSHIP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VERSION" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MONTHS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAFORMATS" type="tns:ArrayOfDATAFORMAT"/>
         </s:sequence>
         <s:attribute name="Source" type="s:string"/>
         <s:attribute name="Message" type="s:string"/>
         <s:attribute name="Date" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="Exchange">
+      <s:complexType name="EXCHANGE">
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="LastTradeDateTime" type="s:dateTime" use="required"/>
@@ -94,32 +94,32 @@
         <s:attribute name="IntradayStartDate" type="s:dateTime" use="required"/>
         <s:attribute name="HasIntradayProduct" type="s:boolean" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfExchange">
+      <s:complexType name="ArrayOfEXCHANGE">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Exchange" nillable="true" type="tns:Exchange"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EXCHANGE" nillable="true" type="tns:EXCHANGE"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Symbol">
+      <s:complexType name="SYMBOL">
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="LongName" type="s:string"/>
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSymbol">
+      <s:complexType name="ArrayOfSYMBOL">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Symbol" nillable="true" type="tns:Symbol"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL" nillable="true" type="tns:SYMBOL"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfSymbol2">
+      <s:complexType name="ArrayOfSYMBOL2">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Symbol2" nillable="true" type="tns:Symbol2"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL2" nillable="true" type="tns:SYMBOL2"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Symbol2">
+      <s:complexType name="SYMBOL2">
         <s:attribute name="c" type="s:string"/>
         <s:attribute name="n" type="s:string"/>
       </s:complexType>
-      <s:complexType name="Quote">
+      <s:complexType name="QUOTE">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
@@ -138,17 +138,17 @@
         <s:attribute name="NextOpen" type="s:double" use="required"/>
         <s:attribute name="Modified" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfQuote">
+      <s:complexType name="ArrayOfQUOTE">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Quote" nillable="true" type="tns:Quote"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE" nillable="true" type="tns:QUOTE"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfQuote2">
+      <s:complexType name="ArrayOfQUOTE2">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Quote2" nillable="true" type="tns:Quote2"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE2" nillable="true" type="tns:QUOTE2"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Quote2">
+      <s:complexType name="QUOTE2">
         <s:attribute name="s" type="s:string"/>
         <s:attribute name="d" type="s:dateTime" use="required"/>
         <s:attribute name="o" type="s:double" use="required"/>
@@ -160,12 +160,12 @@
         <s:attribute name="b" type="s:double" use="required"/>
         <s:attribute name="a" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSplit">
+      <s:complexType name="ArrayOfSPLIT">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Split" nillable="true" type="tns:Split"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SPLIT" nillable="true" type="tns:SPLIT"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Split">
+      <s:complexType name="SPLIT">
         <s:attribute name="Exchange" type="s:string"/>
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
@@ -180,12 +180,12 @@
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfFundamental">
+      <s:complexType name="ArrayOfFUNDAMENTAL">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Fundamental" nillable="true" type="tns:Fundamental"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FUNDAMENTAL" nillable="true" type="tns:FUNDAMENTAL"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Fundamental">
+      <s:complexType name="FUNDAMENTAL">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
@@ -208,12 +208,12 @@
         <s:attribute name="PtB" type="s:double" use="required"/>
         <s:attribute name="Yield" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfTechnical">
+      <s:complexType name="ArrayOfTECHNICAL">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Technical" nillable="true" type="tns:Technical"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TECHNICAL" nillable="true" type="tns:TECHNICAL"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Technical">
+      <s:complexType name="TECHNICAL">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
@@ -260,26 +260,26 @@
         <s:attribute name="Volatility" type="s:double" use="required"/>
         <s:attribute name="Liquidity" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSymbolChange">
+      <s:complexType name="ArrayOfSYMBOLCHANGE">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SymbolChange" nillable="true" type="tns:SymbolChange"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOLCHANGE" nillable="true" type="tns:SYMBOLCHANGE"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="SymbolChange">
+      <s:complexType name="SYMBOLCHANGE">
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
         <s:attribute name="OldSymbol" type="s:string"/>
         <s:attribute name="NewSymbol" type="s:string"/>
         <s:attribute name="ExchangeCode" type="s:string"/>
         <s:attribute name="NewExchangeCode" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfDataFormat">
+      <s:complexType name="ArrayOfDATAFORMAT">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="DataFormat" nillable="true" type="tns:DataFormat"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT" nillable="true" type="tns:DATAFORMAT"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="DataFormat">
+      <s:complexType name="DATAFORMAT">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="ColumnS" type="tns:ArrayOfDataFormat_Column"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COLUMNS" type="tns:ArrayOfDATAFORMAT_COLUMN"/>
         </s:sequence>
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
@@ -301,12 +301,12 @@
         <s:attribute name="SymbolFilenameFormatDate" type="s:string"/>
         <s:attribute name="SymbolFilenameFormatDateRange" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfDataFormat_Column">
+      <s:complexType name="ArrayOfDATAFORMAT_COLUMN">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="DataFormat_Column" nillable="true" type="tns:DataFormat_Column"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT_COLUMN" nillable="true" type="tns:DATAFORMAT_COLUMN"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="DataFormat_Column">
+      <s:complexType name="DATAFORMAT_COLUMN">
         <s:attribute name="SortOrder" type="s:int" use="required"/>
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="DataFormat" type="s:string"/>
@@ -771,8 +771,8 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="LoginResult" nillable="true" type="tns:LoginResult"/>
-      <s:element name="Response" nillable="true" type="tns:Response"/>
+      <s:element name="LOGINRESPONSE" nillable="true" type="tns:LoginResult"/>
+      <s:element name="RESPONSE" nillable="true" type="tns:Response"/>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="LoginSoapIn">
@@ -895,10 +895,10 @@
   <wsdl:message name="ExchangeMonthsSoapOut">
     <wsdl:part name="parameters" element="tns:ExchangeMonthsResponse"/>
   </wsdl:message>
-  <wsdl:message name="SplitListByExchangesoapIn">
+  <wsdl:message name="SplitListByExchangeSoapIn">
     <wsdl:part name="parameters" element="tns:SplitListByExchange"/>
   </wsdl:message>
-  <wsdl:message name="SplitListByExchangesoapOut">
+  <wsdl:message name="SplitListByExchangeSoapOut">
     <wsdl:part name="parameters" element="tns:SplitListByExchangeResponse"/>
   </wsdl:message>
   <wsdl:message name="SplitListBySymbolSoapIn">
@@ -937,10 +937,10 @@
   <wsdl:message name="QuoteListByDatePeriod2SoapOut">
     <wsdl:part name="parameters" element="tns:QuoteListByDatePeriod2Response"/>
   </wsdl:message>
-  <wsdl:message name="SymbolChangesByExchangesoapIn">
+  <wsdl:message name="SymbolChangesByExchangeSoapIn">
     <wsdl:part name="parameters" element="tns:SymbolChangesByExchange"/>
   </wsdl:message>
-  <wsdl:message name="SymbolChangesByExchangesoapOut">
+  <wsdl:message name="SymbolChangesByExchangeSoapOut">
     <wsdl:part name="parameters" element="tns:SymbolChangesByExchangeResponse"/>
   </wsdl:message>
   <wsdl:message name="DataClientLatestVersionSoapIn">
@@ -972,7 +972,7 @@
     <wsdl:part name="Password" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="LoginHttpGetOut">
-    <wsdl:part name="Body" element="tns:LoginResult"/>
+    <wsdl:part name="Body" element="tns:LOGINRESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Login2HttpGetIn">
     <wsdl:part name="Username" type="s:string"/>
@@ -980,40 +980,40 @@
     <wsdl:part name="Version" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Login2HttpGetOut">
-    <wsdl:part name="Body" element="tns:LoginResult"/>
+    <wsdl:part name="Body" element="tns:LOGINRESPONSE"/>
   </wsdl:message>
   <wsdl:message name="MembershipHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="MembershipHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeGetHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeGetHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolList2HttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolList2HttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteGetHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1021,7 +1021,7 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteGetHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteList2HttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1029,7 +1029,7 @@
     <wsdl:part name="Symbols" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteList2HttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolGetHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1037,28 +1037,28 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolGetHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="FundamentalListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="FundamentalListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="TechnicalListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="TechnicalListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDateHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1066,7 +1066,7 @@
     <wsdl:part name="QuoteDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDateHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDate2HttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1074,7 +1074,7 @@
     <wsdl:part name="QuoteDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDate2HttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1083,21 +1083,21 @@
     <wsdl:part name="StartDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Top10GainsHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Top10GainsHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Top10LossesHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Top10LossesHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolChartHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1105,21 +1105,21 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolChartHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeMonthsHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeMonthsHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SplitListByExchangeHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SplitListByExchangeHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SplitListBySymbolHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1127,13 +1127,13 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SplitListBySymbolHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="CountryListHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="CountryListHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1143,7 +1143,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodByDateRangeHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1154,7 +1154,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodByDateRangeHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriodHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1163,7 +1163,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriodHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriod2HttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1172,26 +1172,26 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriod2HttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolChangesByExchangeHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolChangesByExchangeHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="DataClientLatestVersionHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="DataClientLatestVersionHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="DataFormatsHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="DataFormatsHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="UpdateDataFormatHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1200,7 +1200,7 @@
     <wsdl:part name="IncludeSuffix" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="UpdateDataFormatHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ValidateAccessHttpGetIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1209,14 +1209,14 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ValidateAccessHttpGetOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="LoginHttpPostIn">
     <wsdl:part name="Username" type="s:string"/>
     <wsdl:part name="Password" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="LoginHttpPostOut">
-    <wsdl:part name="Body" element="tns:LoginResult"/>
+    <wsdl:part name="Body" element="tns:LOGINRESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Login2HttpPostIn">
     <wsdl:part name="Username" type="s:string"/>
@@ -1224,40 +1224,40 @@
     <wsdl:part name="Version" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Login2HttpPostOut">
-    <wsdl:part name="Body" element="tns:LoginResult"/>
+    <wsdl:part name="Body" element="tns:LOGINRESPONSE"/>
   </wsdl:message>
   <wsdl:message name="MembershipHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="MembershipHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeGetHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeGetHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolList2HttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolList2HttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteGetHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1265,7 +1265,7 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteGetHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteList2HttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1273,7 +1273,7 @@
     <wsdl:part name="Symbols" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteList2HttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolGetHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1281,28 +1281,28 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolGetHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="FundamentalListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="FundamentalListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="TechnicalListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="TechnicalListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDateHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1310,7 +1310,7 @@
     <wsdl:part name="QuoteDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDateHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDate2HttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1318,7 +1318,7 @@
     <wsdl:part name="QuoteDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDate2HttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1327,21 +1327,21 @@
     <wsdl:part name="StartDate" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Top10GainsHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Top10GainsHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="Top10LossesHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="Top10LossesHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolChartHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1349,21 +1349,21 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolChartHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ExchangeMonthsHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ExchangeMonthsHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SplitListByExchangeHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SplitListByExchangeHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SplitListBySymbolHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1371,13 +1371,13 @@
     <wsdl:part name="Symbol" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SplitListBySymbolHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="CountryListHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="CountryListHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1387,7 +1387,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodByDateRangeHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1398,7 +1398,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolHistoryPeriodByDateRangeHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriodHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1407,7 +1407,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriodHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriod2HttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1416,26 +1416,26 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="QuoteListByDatePeriod2HttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="SymbolChangesByExchangeHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
     <wsdl:part name="Exchange" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="SymbolChangesByExchangeHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="DataClientLatestVersionHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="DataClientLatestVersionHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="DataFormatsHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="DataFormatsHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="UpdateDataFormatHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1444,7 +1444,7 @@
     <wsdl:part name="IncludeSuffix" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="UpdateDataFormatHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:message name="ValidateAccessHttpPostIn">
     <wsdl:part name="Token" type="s:string"/>
@@ -1453,7 +1453,7 @@
     <wsdl:part name="Period" type="s:string"/>
   </wsdl:message>
   <wsdl:message name="ValidateAccessHttpPostOut">
-    <wsdl:part name="Body" element="tns:Response"/>
+    <wsdl:part name="Body" element="tns:RESPONSE"/>
   </wsdl:message>
   <wsdl:portType name="DataSoap">
     <wsdl:operation name="Login">
@@ -1558,8 +1558,8 @@
     </wsdl:operation>
     <wsdl:operation name="SplitListByExchange">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of Splits of a specific exchange.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ)&lt;br/&gt;OUTPUT: List of splits</wsdl:documentation>
-      <wsdl:input message="tns:SplitListByExchangesoapIn"/>
-      <wsdl:output message="tns:SplitListByExchangesoapOut"/>
+      <wsdl:input message="tns:SplitListByExchangeSoapIn"/>
+      <wsdl:output message="tns:SplitListByExchangeSoapOut"/>
     </wsdl:operation>
     <wsdl:operation name="SplitListBySymbol">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of Splits of a specific symbol.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbol (eg:MSFT)&lt;br/&gt;OUTPUT: List of splits</wsdl:documentation>
@@ -1593,8 +1593,8 @@
     </wsdl:operation>
     <wsdl:operation name="SymbolChangesByExchange">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of symbol changes of a given exchange. &lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ)&lt;br/&gt;OUTPUT: List of symbol changes</wsdl:documentation>
-      <wsdl:input message="tns:SymbolChangesByExchangesoapIn"/>
-      <wsdl:output message="tns:SymbolChangesByExchangesoapOut"/>
+      <wsdl:input message="tns:SymbolChangesByExchangeSoapIn"/>
+      <wsdl:output message="tns:SymbolChangesByExchangeSoapOut"/>
     </wsdl:operation>
     <wsdl:operation name="DataClientLatestVersion">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the latest version information of Data Client.&lt;br/&gt;INPUT: Token (Login Token)&lt;br/&gt;OUTPUT: Date Client Version</wsdl:documentation>
@@ -1612,7 +1612,7 @@
       <wsdl:output message="tns:UpdateDataFormatSoapOut"/>
     </wsdl:operation>
     <wsdl:operation name="ValidateAccess">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: Response</wsdl:documentation>
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: RESPONSE</wsdl:documentation>
       <wsdl:input message="tns:ValidateAccessSoapIn"/>
       <wsdl:output message="tns:ValidateAccessSoapOut"/>
     </wsdl:operation>
@@ -1774,7 +1774,7 @@
       <wsdl:output message="tns:UpdateDataFormatHttpGetOut"/>
     </wsdl:operation>
     <wsdl:operation name="ValidateAccess">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: Response</wsdl:documentation>
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: RESPONSE</wsdl:documentation>
       <wsdl:input message="tns:ValidateAccessHttpGetIn"/>
       <wsdl:output message="tns:ValidateAccessHttpGetOut"/>
     </wsdl:operation>
@@ -1936,7 +1936,7 @@
       <wsdl:output message="tns:UpdateDataFormatHttpPostOut"/>
     </wsdl:operation>
     <wsdl:operation name="ValidateAccess">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: Response</wsdl:documentation>
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access for an entire exchange, specific date, and specific period.&lt;br/&gt;INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)&lt;br/&gt;OUTPUT: RESPONSE</wsdl:documentation>
       <wsdl:input message="tns:ValidateAccessHttpPostIn"/>
       <wsdl:output message="tns:ValidateAccessHttpPostOut"/>
     </wsdl:operation>

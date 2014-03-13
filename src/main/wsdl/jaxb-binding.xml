@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.0"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        >
+    <!--
+    <jaxb:bindings node="//s:complexType[@name='RESPONSE']">
+        <jaxb:class name="Response"/>
+    </jaxb:bindings>
+    -->
+</jaxb:bindings>

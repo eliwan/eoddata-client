@@ -37,10 +37,10 @@ public class EodDataClientTest
 
         System.out.println("+++++++++++++++++++++++++++++= [" + properties.get("eoddata.login") + ":" + properties.get("eoddata.password") + "]");
         LoginResult loginResult = client.login((String) properties.get("eoddata.login"), (String) properties.get("eoddata.password"));
+        token = loginResult.getToken();
         System.out.println("token " + token);
         System.out.println(loginResult.getMessage());
         System.out.println(loginResult.getDataFormat());
-        token = loginResult.getToken();
     }
 
     @Test
@@ -49,8 +49,8 @@ public class EodDataClientTest
         Response membership = client.membership(token);
 
         System.out.println(membership.getMessage());
-        System.out.println(membership.getMonths());
-        System.out.println(membership.getMembership());
+        System.out.println(membership.getMONTHS());
+        System.out.println(membership.getMEMBERSHIP());
         assertThat(membership).isNotNull();
     }
 
