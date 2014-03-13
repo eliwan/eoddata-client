@@ -32,7 +32,7 @@ import javax.xml.ws.WebServiceFeature;
 public class EodDataClient extends Service {
 
     private static final String PROPERTY_TO_OVERRIDE_ENDPOINT_URL = "ws.eoddata.com.client.url";
-    private static final String DEFAULT_ENDPOINT_URL = "http://ws.eoddata.com/data.asmx";
+    private static final String DEFAULT_ENDPOINT_URL = "http://ws.eoddata.com/Data";
 
     private static final URL WSDL_LOCATION;
 
@@ -56,7 +56,7 @@ public class EodDataClient extends Service {
 
         SERVICE = new QName(endpointUrl, "Data");
         DATA_SOAP_12 = new QName(endpointUrl, "DataSoap12");
-        DATA_SOAP = new QName("http://ws.eoddata.com/Data", "DataSoap");
+        DATA_SOAP = new QName(endpointUrl, "DataSoap");
         DATA_HTTP_GET = new QName(endpointUrl, "DATA_HTTP_GET");
         DATA_HTTP_POST = new QName(endpointUrl, "DATA_HTTP_POST");
     }

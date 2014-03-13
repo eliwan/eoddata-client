@@ -37,8 +37,13 @@
     </scm>
 
     <properties>
-        <cxf.version>2.7.10</cxf.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <cxf.version>2.7.10</cxf.version>
+
+        <!-- override these in your local ~/.m2/settings.xml to assure tests work. -->
+        <eoddata.login>eoddata-platinum-membership-login</eoddata.login>
+        <eoddata.password>eoddata-platinum-membership-password</eoddata.password>
     </properties>
 
     <dependencies>
@@ -61,6 +66,11 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -73,6 +83,12 @@
                 <directory>${basedir}/src/main/resources/</directory>
             </resource>
         </resources>
+        <testResources>
+            <testResource>
+                <directory>${basedir}/src/test/resources/</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
