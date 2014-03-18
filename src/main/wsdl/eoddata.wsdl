@@ -57,30 +57,30 @@
       </s:element>
       <s:complexType name="Response">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGE" type="tns:EXCHANGE"/>
-          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGES" type="tns:ArrayOfEXCHANGE"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SYMBOL" type="tns:SYMBOL"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS" type="tns:ArrayOfSYMBOL"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS2" type="tns:ArrayOfSYMBOL2"/>
-          <s:element minOccurs="0" maxOccurs="1" name="QUOTE" type="tns:QUOTE"/>
-          <s:element minOccurs="0" maxOccurs="1" name="QUOTES" type="tns:ArrayOfQUOTE"/>
-          <s:element minOccurs="0" maxOccurs="1" name="QUOTES2" type="tns:ArrayOfQUOTE2"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SPLITS" type="tns:ArrayOfSPLIT"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGE" type="tns:Exchange"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EXCHANGES" type="tns:ArrayOfExchange"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOL" type="tns:Symbol"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS" type="tns:ArrayOfSymbol"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLS2" type="tns:ArrayOfSymbol2"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTE" type="tns:Quote"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTES" type="tns:ArrayOfQuote"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUOTES2" type="tns:ArrayOfQuote2"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SPLITS" type="tns:ArrayOfSplit"/>
           <s:element minOccurs="0" maxOccurs="1" name="COUNTRIES" type="tns:ArrayOfCountryBase"/>
-          <s:element minOccurs="0" maxOccurs="1" name="FUNDAMENTALS" type="tns:ArrayOfFUNDAMENTAL"/>
-          <s:element minOccurs="0" maxOccurs="1" name="TECHNICALS" type="tns:ArrayOfTECHNICAL"/>
-          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLCHANGES" type="tns:ArrayOfSYMBOLCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FUNDAMENTALS" type="tns:ArrayOfFundamental"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TECHNICALS" type="tns:ArrayOfTechnical"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SYMBOLCHANGES" type="tns:ArrayOfSymbolChange"/>
           <s:element minOccurs="0" maxOccurs="1" name="CHART" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="MEMBERSHIP" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="VERSION" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="MONTHS" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="DATAFORMATS" type="tns:ArrayOfDATAFORMAT"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAFORMATS" type="tns:ArrayOfDataFormat"/>
         </s:sequence>
         <s:attribute name="Source" type="s:string"/>
         <s:attribute name="Message" type="s:string"/>
         <s:attribute name="Date" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="EXCHANGE">
+      <s:complexType name="Exchange">
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="LastTradeDateTime" type="s:dateTime" use="required"/>
@@ -94,32 +94,32 @@
         <s:attribute name="IntradayStartDate" type="s:dateTime" use="required"/>
         <s:attribute name="HasIntradayProduct" type="s:boolean" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfEXCHANGE">
+      <s:complexType name="ArrayOfExchange">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="EXCHANGE" nillable="true" type="tns:EXCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EXCHANGE" nillable="true" type="tns:Exchange"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="SYMBOL">
+      <s:complexType name="Symbol">
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="LongName" type="s:string"/>
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSYMBOL">
+      <s:complexType name="ArrayOfSymbol">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL" nillable="true" type="tns:SYMBOL"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL" nillable="true" type="tns:Symbol"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfSYMBOL2">
+      <s:complexType name="ArrayOfSymbol2">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL2" nillable="true" type="tns:SYMBOL2"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOL2" nillable="true" type="tns:Symbol2"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="SYMBOL2">
+      <s:complexType name="Symbol2">
         <s:attribute name="c" type="s:string"/>
         <s:attribute name="n" type="s:string"/>
       </s:complexType>
-      <s:complexType name="QUOTE">
+      <s:complexType name="Quote">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
@@ -138,17 +138,17 @@
         <s:attribute name="NextOpen" type="s:double" use="required"/>
         <s:attribute name="Modified" type="s:dateTime" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfQUOTE">
+      <s:complexType name="ArrayOfQuote">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE" nillable="true" type="tns:QUOTE"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE" nillable="true" type="tns:Quote"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfQUOTE2">
+      <s:complexType name="ArrayOfQuote2">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE2" nillable="true" type="tns:QUOTE2"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QUOTE2" nillable="true" type="tns:Quote2"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="QUOTE2">
+      <s:complexType name="Quote2">
         <s:attribute name="s" type="s:string"/>
         <s:attribute name="d" type="s:dateTime" use="required"/>
         <s:attribute name="o" type="s:double" use="required"/>
@@ -160,12 +160,12 @@
         <s:attribute name="b" type="s:double" use="required"/>
         <s:attribute name="a" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSPLIT">
+      <s:complexType name="ArrayOfSplit">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SPLIT" nillable="true" type="tns:SPLIT"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SPLIT" nillable="true" type="tns:Split"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="SPLIT">
+      <s:complexType name="Split">
         <s:attribute name="Exchange" type="s:string"/>
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
@@ -180,12 +180,12 @@
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfFUNDAMENTAL">
+      <s:complexType name="ArrayOfFundamental">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="FUNDAMENTAL" nillable="true" type="tns:FUNDAMENTAL"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FUNDAMENTAL" nillable="true" type="tns:Fundamental"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="FUNDAMENTAL">
+      <s:complexType name="Fundamental">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
@@ -208,12 +208,12 @@
         <s:attribute name="PtB" type="s:double" use="required"/>
         <s:attribute name="Yield" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfTECHNICAL">
+      <s:complexType name="ArrayOfTechnical">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="TECHNICAL" nillable="true" type="tns:TECHNICAL"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TECHNICAL" nillable="true" type="tns:Technical"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="TECHNICAL">
+      <s:complexType name="Technical">
         <s:attribute name="Symbol" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
         <s:attribute name="Description" type="s:string"/>
@@ -260,26 +260,26 @@
         <s:attribute name="Volatility" type="s:double" use="required"/>
         <s:attribute name="Liquidity" type="s:double" use="required"/>
       </s:complexType>
-      <s:complexType name="ArrayOfSYMBOLCHANGE">
+      <s:complexType name="ArrayOfSymbolChange">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOLCHANGE" nillable="true" type="tns:SYMBOLCHANGE"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SYMBOLCHANGE" nillable="true" type="tns:SymbolChange"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="SYMBOLCHANGE">
+      <s:complexType name="SymbolChange">
         <s:attribute name="DateTime" type="s:dateTime" use="required"/>
         <s:attribute name="OldSymbol" type="s:string"/>
         <s:attribute name="NewSymbol" type="s:string"/>
         <s:attribute name="ExchangeCode" type="s:string"/>
         <s:attribute name="NewExchangeCode" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfDATAFORMAT">
+      <s:complexType name="ArrayOfDataFormat">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT" nillable="true" type="tns:DATAFORMAT"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT" nillable="true" type="tns:DataFormat"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="DATAFORMAT">
+      <s:complexType name="DataFormat">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="COLUMNS" type="tns:ArrayOfDATAFORMAT_COLUMN"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COLUMNS" type="tns:ArrayOfDataFormatColumn"/>
         </s:sequence>
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="Name" type="s:string"/>
@@ -301,12 +301,12 @@
         <s:attribute name="SymbolFilenameFormatDate" type="s:string"/>
         <s:attribute name="SymbolFilenameFormatDateRange" type="s:string"/>
       </s:complexType>
-      <s:complexType name="ArrayOfDATAFORMAT_COLUMN">
+      <s:complexType name="ArrayOfDataFormatColumn">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT_COLUMN" nillable="true" type="tns:DATAFORMAT_COLUMN"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DATAFORMAT_COLUMN" nillable="true" type="tns:DataFormatColumn"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="DATAFORMAT_COLUMN">
+      <s:complexType name="DataFormatColumn">
         <s:attribute name="SortOrder" type="s:int" use="required"/>
         <s:attribute name="Code" type="s:string"/>
         <s:attribute name="DataFormat" type="s:string"/>
